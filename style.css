@@ -11,6 +11,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url(./files/images/bg.jpg);
+  background-size: cover;
 }
 #bg {
   height: 100vh;
