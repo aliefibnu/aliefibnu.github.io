@@ -7,17 +7,15 @@
     <meta name="keywords" content="Alief, Alief Ibnu, Alief Ibn, Alief Ibnu H, Alief Ibnu Hamdani, Alief Ibn H.," />
     <meta name="description" content="Bio Aku">
     <meta name="theme-color" content="#00b1b8">
+    <!--todo EXTERNAL FILES -->
+    <!--? CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link href='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c15c4f2f-039f-48eb-8339-cad57b2b5353/da0373y-5e90f4d3-e020-4e2c-ad35-7bead062a572.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MxNWM0ZjJmLTAzOWYtNDhlYi04MzM5LWNhZDU3YjJiNTM1M1wvZGEwMzczeS01ZTkwZjRkMy1lMDIwLTRlMmMtYWQzNS03YmVhZDA2MmE1NzIuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.WHfdoujXOK7FXQm5ufsD1ADvOXyhpxlrJG1ofYhSy-g' rel='shorcut icon' >
+    <link rel="stylesheet" href="style.css">
     <!--? HEADER SETTINGS -->
     <title> Alief Ibnu Hamdani </title>
-    <!--? EXTERNAL JAVASCRIPT FILES -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--? EXTERNAL CSS FILES -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
-    <link href='./files/images/pic.png' rel='shorcut icon' >
-    <link rel="stylesheet" href="style.css">
-    <script src="./files/script/script.js"></script>
   </head>
-  <body oncontextmenu="return false">
+  <body oncontextmenu="dbClick();return false" id="body">
     <div class="profile-card">
       <!--? HEADER -->
       <div class="card-header">
@@ -55,11 +53,14 @@
         </div>
       </div>
     </div>
+    <!--? EXTERNAL JAVASCRIPT FILES -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./files/script/script.js"></script>
     <script>
       /**
        *? SETTING ELEMENT VALUE
       */
-      document.getElementById("umur").innerText=getAge("2008-06-15")
-    </script>
+     document.getElementById("umur").innerText=getAge("2008-06-15")
+     </script>
   </body>
-</html>
+  </html>

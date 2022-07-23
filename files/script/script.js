@@ -5,11 +5,17 @@ function devtoolIsOpening() {
   let after = new Date().getTime();
   if (after - before > 200) {
       alert(" Dont open Developer Tools. ");
-      window.location.replace("../ups/hack");
   }
   setTimeout(devtoolIsOpening, 100);
 }
-
+function returnFalse(){
+  let body = document.getElementById("body")
+  body.addEventListener("keydown",(event)=>{
+    body.style.display="block"
+    body.style.background="white"
+    body.innerHTML=`DONT CLICK KEY : ${event.key}`;
+  })
+}
 function getAge(Lahir){
   var dob = Lahir.replace("-","");
   var year = Number(dob.substr(0, 4));
@@ -22,3 +28,11 @@ function getAge(Lahir){
   }
   return age;
 }
+function dbClick(){
+  let body = document.getElementById("body")
+  body.style.display="block"
+  body.style.background="white"
+  body.innerHTML="<h1>WARNING !</h1><br><h3>NO DOUBLE CLICK / RIGHT CLICK ALOWWED</h3>"
+}
+devtoolIsOpening();
+returnFalse()
