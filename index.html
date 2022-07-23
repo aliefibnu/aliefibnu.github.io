@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id, in">
+  <head>
+    <!--? META TAG SETTINGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Alief, Alief Ibnu, Alief Ibn, Alief Ibnu H, Alief Ibnu Hamdani, Alief Ibn H.," />
+    <meta name="description" content="Bio Aku">
+    <meta name="theme-color" content="#00b1b8">
+    <!--? HEADER SETTINGS -->
+    <title> Alief Ibnu Hamdani </title>
+    <!--? EXTERNAL JAVASCRIPT FILES -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--? EXTERNAL CSS FILES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link href='./files/images/pic.png' rel='shorcut icon' >
+    <link rel="stylesheet" href="style.css">
+    <script src="./files/script/script.js"></script>
+  </head>
+  <body oncontextmenu="return false">
+    <img src="./files/images/bg.jpg" alt="" id="bg">
+    <div class="profile-card">
+      <!--? HEADER -->
+      <div class="card-header">
+        <div class="pic">
+          <img src="./files/images/pic.png" alt="Foto ku">
+        </div>
+        <div class="name" alt="nama">Alief Ibnu Hamdani</div>
+        <div class="desc" alt='kegabutan'>15 - Juni - 2008</div>
+        <!--? SOCIAL MEDIA -->
+        <div class="sm">
+          <a href="https://t.me/alief_o_o" class="fab fa-telegram" target="_blank"></a>
+          <a href="https://api.whatsapp.com/send?phone=6285348847199" class="fab fa-whatsapp" target="_blank"></a>
+          <a href="https://instagram.com/alief_ibnu_hamdani" class="fab fa-instagram" target="_blank" ></a>
+          <a href="https://covid19.go.id/" class="fas fa-shield-virus" target="_blank"></a>
+        </div>
+        <a href="mailto:aliefarumi@gmail.com" class="contact-btn" target="_blank">Hubungi Saya</a>
+      </div>
+      <!--? CARD FOOTER INFO -->
+      <div class="card-footer">
+        <div class="numbers">
+          <div class="item">
+            <span>🇮🇩</span>
+            Negara
+          </div>
+          <div class="border"></div>
+          <div class="item">
+            <span id="umur"></span>
+            Umur
+          </div>
+          <div class="border"></div>
+          <div class="item">
+            <span class="smp">pria</span>
+            Jenis Kelamin
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      /**
+       *? SETTING ELEMENT VALUE
+      */
+      document.getElementById("umur").innerText=getAge("2008-06-15")
+    </script>
+  </body>
+</html>
