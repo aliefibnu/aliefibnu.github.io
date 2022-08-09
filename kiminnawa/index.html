@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mada Kono Sekaiwa</title>
+    <style>
+      body{
+        background-image: url(https://c4.wallpaperflare.com/wallpaper/146/644/985/makoto-shinkai-kimi-no-na-wa-wallpaper-preview.jpg);
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        cursor: none;
+        overflow: hidden;
+        font-family: serif;
+      }
+      .msg1{
+        width: 100px;
+        height: 70px;
+        border-radius: 50px;
+        background-color: white;
+        position: fixed;
+        /* z-index: 9; */
+        margin-top: 500px;
+        margin-left: 1120px;
+      }
+      .msg2{
+        width: 100px;
+        height: 70px;
+        border-radius: 50px;
+        background-color: white;
+        position: fixed;
+        /* z-index: ; */
+        margin-top: 550px;
+        margin-left: 900px;
+      }
+      .segitiga1{
+        width: 30px;
+        height: 30px;
+        margin-left: 70px;
+        margin-top: 40px;
+        border-top-left-radius: 100px;
+        background-color: white;
+      }
+      .segitiga2{
+        width: 30px;
+        height: 30px;
+        margin-left: 70px;
+        margin-top: 40px;
+        border-top-left-radius: 100px;
+        background-color: white;
+      }
+      .percakapan{
+        margin-top: -50px;
+        position: fixed;
+        margin-left: 20px;
+      }
+    </style>
+    <script>
+      function exitFullscreen() {
+        if(document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if(document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if(document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        }
+      }
+    </script>
+  </head>
+  <body oncontextmenu="return false">
+    <div class="msg1" id="msg1" style="display: none;">
+      <div class="segitiga1"></div>
+      <div class="percakapan" id="p1"></div>
+    </div>
+    <div class="msg2" id="msg2" style="display: none;">
+      <div class="segitiga2"></div>
+      <div class="percakapan" id="p2"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
