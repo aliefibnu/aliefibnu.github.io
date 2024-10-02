@@ -39,7 +39,7 @@ data = {
     },
   },
 };
-startContentId = "durasi";
+startContentId = "maskapai";
 usdToIdr = 15279.8;
 elNavigation = document.getElementsByClassName("nav");
 elTable = document.getElementsByClassName("cTable");
