@@ -2,8 +2,8 @@
 let alas, tinggi, hasil;
 
 // ? Masukkan input
-alas = prompt("Masukkan panjang alas segitiga");
-tinggi = prompt("Masukkan tinggi segitiga");
+alas = prompt("Masukkan panjang alas segitiga (cm)");
+tinggi = prompt("Masukkan tinggi segitiga (cm)");
 
 // ! Validasi tipe data
 if (isNaN(alas) || isNaN(tinggi)) {
@@ -15,6 +15,6 @@ if (isNaN(alas) || isNaN(tinggi)) {
 
   // ? Tampilkan data
   alert(
-    `Luas alas segitiga dari alas : ${alas} dan tinggi ${tinggi} adalah ${hasil}`
+    `Luas alas segitiga dari alas : ${alas} dan tinggi ${tinggi} adalah ${hasil}cm`
   );
 }
