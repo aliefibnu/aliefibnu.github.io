@@ -15,6 +15,6 @@ if (isNaN(alas) || isNaN(tinggi)) {
 
   // ? Tampilkan data
   alert(
-    `Luas alas segitiga dari alas : ${alas} dan tinggi ${tinggi} adalah ${hasil}cm`
+    `Luas alas segitiga dari alas : ${alas}cm dan tinggi ${tinggi}cm adalah ${hasil}cm`
   );
 }
