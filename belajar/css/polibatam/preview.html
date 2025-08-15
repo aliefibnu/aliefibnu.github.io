@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        flex-wrap: wrap;
+      }
+      .tugas {
+        width: 450px;
+        height: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tugas t1">
+      <div></div>
+      <style>
+        .tugas.t1 div {
+          width: 300px;
+          height: 200px;
+          background-color: red;
+          position: relative;
+          border: 1px solid black;
+        }
+        .tugas.t1 div::after {
+          content: "";
+          width: 100%;
+          height: 50%;
+          background-color: white;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      </style>
+    </div>
+    <div class="tugas t2">
+      <div></div>
+      <style>
+        .tugas.t2 div {
+          width: 300px;
+          height: 300px;
+          position: absolute;
+          background-color: #f8f8f8;
+          border: 1px solid gray;
+          /* border-radius: 50%; */
+          position: relative;
+        }
+        .tugas.t2 div::after {
+          content: "";
+          width: 100px;
+          aspect-ratio: 1;
+          background-color: black;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+        }
+      </style>
+    </div>
+    <div class="tugas t3">
+      <div></div>
+      <style>
+        .tugas.t3 div {
+          width: 200px;
+          height: 200px;
+          position: relative;
+          background-color: black;
+          border-radius: 50%;
+        }
+        .tugas.t3 div::before,
+        .tugas.t3 div::after {
+          content: "";
+          width: 80px;
+          height: 80px;
+          background-color: #000;
+          border-radius: 50%;
+          position: absolute;
+          top: -30px;
+        }
+        .tugas.t3 div::before {
+          left: -30px;
+        }
+        .tugas.t3 div::after {
+          right: -30px;
+        }
+      </style>
+    </div>
+    <div class="tugas t4">
+      <div x>
+        <div class="r"></div>
+        <div class="y"></div>
+        <div class="g"></div>
+      </div>
+      <style>
+        .tugas.t4 div[x] {
+          width: 100px;
+          height: 300px;
+          background-color: #2c3e50;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 20px;
+          position: relative;
+          transform: translate(0, -10%);
+        }
+        .tugas.t4 div[x] div {
+          width: 60px;
+          height: 60px;
+          border: #fff solid 1px;
+          border-radius: 50%;
+        }
+        .tugas.t4 div[x] .r {
+          background-color: red;
+        }
+        .tugas.t4 div[x] .g {
+          background-color: lightgreen;
+        }
+        .tugas.t4 div[x] .y {
+          background-color: yellow;
+        }
+        .tugas.t4 div[x]::after {
+          content: "";
+          position: absolute;
+          background-color: black;
+          width: 30px;
+          height: 70px;
+          bottom: 0;
+          transform: translate(0, 100%);
+          border-bottom-right-radius: 50px;
+          border-bottom-left-radius: 50px;
+        }
+      </style>
+    </div>
+    <div class="tugas t5">
+      <div></div>
+      <style>
+        .tugas.t5 div {
+          width: 200px;
+          height: 200px;
+          background: linear-gradient(to bottom, #e74c3c 50%, white 50%);
+          border: 1px solid black;
+          border-radius: 50%;
+          position: relative;
+        }
+        .tugas.t5 div::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 10px;
+          top: 50%;
+          transform: translate(0, -50%);
+          background-color: black;
+        }
+        .tugas.t5 div::after {
+          position: absolute;
+          content: "";
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: white;
+          border: 1px solid black;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      </style>
+    </div>
+    <div class="tugas t6">
+      <div></div>
+      <style>
+        .tugas.t6 div {
+          width: 200px;
+          aspect-ratio: 1/1;
+          background-color: #3498db;
+          border-radius: 50%;
+          position: relative;
+        }
+        .tugas.t6 div::after {
+          position: absolute;
+          content: "";
+          width: 130%;
+          height: 20%;
+          border-radius: 50%;
+          border: 3px solid #7f8c8d;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      </style>
+    </div>
+    <div class="tugas t7">
+      <div p>
+        <div dot a></div>
+        <div dot b></div>
+        <div dot c></div>
+        <div dot d></div>
+        <div dot e></div>
+        <div dot f></div>
+      </div>
+      <style>
+        .tugas.t7 [p] {
+          width: 200px;
+          aspect-ratio: 1;
+          background-color: white;
+          border: 3px solid black;
+          display: grid;
+          grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+          place-items: center;
+        }
+        .tugas.t7 [dot] {
+          width: 20px;
+          aspect-ratio: 1;
+          background-color: black;
+          border-radius: 50%;
+        }
+        .tugas.t7 [dot][a] {
+          grid-area: 1/1;
+        }
+        .tugas.t7 [dot][b] {
+          grid-area: 2/1;
+        }
+        .tugas.t7 [dot][c] {
+          grid-area: 3/1;
+        }
+        .tugas.t7 [dot][d] {
+          grid-area: 3/3;
+        }
+        .tugas.t7 [dot][e] {
+          grid-area: 2/3;
+        }
+        .tugas.t7 [dot][f] {
+          grid-area: 1/3;
+        }
+      </style>
+    </div>
+    <div class="tugas t8">
+      <div p>
+        <div class="hair top"></div>
+        <div class="hair left"></div>
+        <div class="hair right"></div>
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="nose"></div>
+        <div class="hair bl"></div>
+        <div class="hair br"></div>
+        <div class="hair b"></div>
+      </div>
+      <style>
+        .tugas.t8 div {
+          display: grid;
+        }
+        .tugas.t8 [p] {
+          width: 90%;
+          aspect-ratio: 1;
+          background-color: #ffa;
+          grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+          gap: 0;
+        }
+        .tugas.t8 .hair {
+          background: rgb(105, 63, 8);
+        }
+        .tugas.t8 .hair.top {
+          grid-area: 1/1/3/9;
+        }
+        .tugas.t8 .hair.right {
+          grid-area: 3/8;
+        }
+        .tugas.t8 .eye.left {
+          grid-area: 5/2/5/4;
+          background: linear-gradient(to right, white 50%, blue 50%);
+        }
+        .tugas.t8 .eye.right {
+          grid-area: 5/6/5/8;
+          background: linear-gradient(to left, white 50%, blue 50%);
+        }
+        .tugas.t8 .nose {
+          grid-area: 6/4/6/6;
+          background: rgb(160, 97, 16);
+        }
+        .tugas.t8 .hair.bl {
+          grid-area: 7/3;
+        }
+        .tugas.t8 .hair.br {
+          grid-area: 7/6;
+        }
+        .tugas.t8 .hair.b {
+          grid-area: 8/3/8/7;
+        }
+      </style>
+    </div>
+    <div class="tugas t9">
+      <div class="parent">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
+      <style>
+        .tugas.t9 .parent {
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
+        .tugas.t9 .parent .card {
+          width: 200px;
+          aspect-ratio: 12/16;
+          border: 1px solid rgb(255, 255, 255);
+          position: absolute;
+        }
+        .tugas.t9 .card:nth-child(1) {
+          background-color: #ffcc6c;
+          z-index: 1;
+          top: 10px;
+          left: 10px;
+        }
+        .tugas.t9 .card:nth-child(2) {
+          background-color: #6cf5ff;
+          z-index: 2;
+          top: 60px;
+          left: 60px;
+        }
+        .tugas.t9 .card:nth-child(3) {
+          background-color: #876cff;
+          z-index: 3;
+          top: 110px;
+          left: 110px;
+        }
+      </style>
+    </div>
+    <div class="tugas t10">
+      <div class="neumorphic-button">Click Me</div>
+      <style>
+        .tugas.t10 {
+          background: #fff;
+        }
+        .neumorphic-button {
+          width: 150px;
+          height: 150px;
+          background: #fff;
+          border-radius: 20px;
+          box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: sans-serif;
+          font-size: 18px;
+          color: #555;
+          cursor: pointer;
+          transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .neumorphic-button:hover {
+          box-shadow: inset 5px 5px 15px #bebebe, inset -5px -5px 15px #ffffff;
+          transform: scale(0.98);
+        }
+
+        .neumorphic-button:active {
+          box-shadow: inset 2px 2px 10px #bebebe, inset -2px -2px 10px #ffffff;
+          transform: scale(0.95);
+        }
+      </style>
+    </div>
+    <div class="tugas t11">
+      <div>★</div>
+      <style>
+        .tugas.t11 div {
+          height: 100px;
+          aspect-ratio: 16/9;
+          background: linear-gradient(
+            to top,
+            #33ff33 0%,
+            #33ff33 30%,
+            yellow 30%,
+            yellow 70%,
+            white 70%,
+            white 100%
+          );
+          transform: scale(2);
+          position: relative;
+          border: 1px solid black;
+          color: white;
+          font-size: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transform: skew(-10deg, -10deg) scale(2);
+        }
+        .tugas.t11 div::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          aspect-ratio: 12/20;
+          background-color: #5d83ff;
+          clip-path: polygon(0 50%, 100% 100%, 100% 0);
+        }
+        .tugas.t11 div::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          border: 50px solid transparent;
+          border-left: 50px solid #2fffd2;
+        }
+      </style>
+    </div>
+    <div class="tugas t12">
+      <div class="parent">
+        <div class="dot"></div>
+      </div>
+      <style>
+        .t12 .parent {
+          width: 50%;
+          padding: 10%;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          border: 3px solid black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+        .t12 .dot {
+          width: 10px;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          background-color: white;
+          z-index: 1000;
+        }
+        .t12 .parent::before {
+          position: absolute;
+          content: "";
+          height: 77%;
+          aspect-ratio: 3/30;
+          background-color: red;
+          clip-path: polygon(50% 0, 0 50%, 50% 100%, 100% 50%);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+      </style>
+    </div>
+    <div class="tugas t13">
+      <div></div>
+      <style>
+        .t13 div {
+          width: 70%;
+          aspect-ratio: 1;
+          background: repeating-conic-gradient(
+            black 0 90deg,
+            white 90deg 180deg
+          );
+          background-size: 25% 25%;
+          border: 3px solid black;
+        }
+      </style>
+    </div>
+    <div class="tugas t14">
+      <div class="parent">
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+        <div class="pattern"></div>
+      </div>
+      <style>
+        .t14 .parent {
+          display: grid;
+          grid-template: repeat(5, 50px) / repeat(5, 50px);
+          height: 250px;
+          aspect-ratio: 1;
+          justify-content: center;
+          align-content: center;
+          border: 1px solid black;
+          place-items: center;
+        }
+        .t14 .pattern:nth-child(even) {
+          rotate: 45deg;
+          background-color: rgb(0, 243, 243);
+        }
+        .t14 .pattern {
+          height: 141.4%;
+          aspect-ratio: 8/16;
+          border-radius: 100%;
+          rotate: -45deg;
+          background: rgb(135, 46, 224);
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+      </style>
+    </div>
+    <div class="tugas t15">
+      <div class="parent">
+        <div class="pattern"></div>
+      </div>
+      <style>
+        .t15 .parent {
+          width: 70%;
+          aspect-ratio: 1;
+          border: 1px solid black;
+          display: grid;
+          grid-template: repeat(9, 1fr) / repeat(9, 1fr);
+        }
+        .t15 .pattern {
+          width: 100%;
+          aspect-ratio: 1;
+          background-color: red; /* contoh warna untuk kelihatan */
+        }
+      </style>
+    </div>
+
+    <!-- New Tasks -->
+    <div class="tugas t16">
+      <div>Tugas 16: Animasi Hover dan Pseudo-element</div>
+      <style>
+        /* Tugas 16: Menambahkan animasi dan selector lanjutan */
+        .tugas.t16 div {
+          width: 200px;
+          height: 200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          background-color: #2ecc71;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          cursor: pointer;
+          transition: transform 0.3s ease;
+        }
+
+        .tugas.t16 div::before {
+          content: "Hover me!";
+          font-size: 20px;
+          color: white;
+          font-weight: bold;
+        }
+
+        .tugas.t16 div:hover {
+          transform: scale(1.1);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .tugas.t16 div:hover::before {
+          content: "Clicked!";
+          color: #3498db;
+          font-size: 24px;
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+      </style>
+    </div>
+    <div class="tugas t17">
+      <div class="parent">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+      </div>
+      <style>
+        /* Tugas 17: Penggunaan CSS Grid lanjutan */
+        .tugas.t17 .parent {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+          gap: 10px;
+          width: 300px;
+          height: 300px;
+          background-color: #ecf0f1;
+          border: 2px solid #bdc3c7;
+        }
+
+        .tugas.t17 .parent div {
+          background-color: #f39c12;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px;
+          font-weight: bold;
+          color: white;
+        }
+
+        .tugas.t17 .parent div:nth-child(1) {
+          grid-column: span 2;
+          background-color: #e74c3c;
+        }
+
+        .tugas.t17 .parent div:nth-child(2) {
+          grid-row: span 2;
+          background-color: #9b59b6;
+        }
+      </style>
+    </div>
+    <div class="tugas t18">
+      <div>Tugas 18: Transformasi dan Skew</div>
+      <style>
+        /* Tugas 18: Penggunaan transformasi lanjutan */
+        .tugas.t18 div {
+          width: 200px;
+          height: 200px;
+          background-color: #8e44ad;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          transform: rotate(45deg);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .tugas.t18 div::after {
+          content: "Transformed!";
+          color: white;
+          font-size: 18px;
+          font-weight: bold;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      </style>
+    </div>
+    <div class="tugas t19">
+      <div class="parent">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+      </div>
+      <style>
+        /* Tugas 19: Penggunaan selector lanjutan :nth-child */
+        .tugas.t19 .parent {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        .tugas.t19 .parent div {
+          width: 80px;
+          height: 80px;
+          background-color: #3498db;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .tugas.t19 .parent div:nth-child(odd) {
+          background-color: #e74c3c;
+        }
+
+        .tugas.t19 .parent div:nth-child(even) {
+          background-color: #2ecc71;
+        }
+
+        .tugas.t19 .parent div:nth-child(3) {
+          background-color: #f39c12;
+        }
+      </style>
+    </div>
+  </body>
+</html>
